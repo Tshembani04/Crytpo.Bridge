@@ -54,7 +54,8 @@ const Welcome = () => {
                       Send Crypto <br /> Across 加密桥.
                   </h1>
                   <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-                      Explore The Crypto World.  Send Ethereum to your friends, family and fellow co-workers on 加密桥 with lightspeed and low-fees.
+                      Explore The Crypto World.  Send Ethereum to your friends, family and fellow co-workers on 加密桥 with lightspeed and low-fees. 
+                      Made with ♥‿♥ by Tshembani Mhlongo
                   </p>
                   // If my account is connected to metamask wallet then I can't see the button 
                   // opposite when not connencted

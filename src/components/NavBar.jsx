@@ -27,9 +27,9 @@ const NavBar = () => {
             )
           )}
 
-          <li className=" py-2 px-7 mx-4 rounded-r-xl cursor-pointer hover:border-[#00E2FF]  bg-blend-lighten md:bg-blend-darken backdrop-blur-sm white-glassmorphism ">
+          {/* <li className=" py-2 px-7 mx-4 rounded-r-xl cursor-pointer hover:border-[#00E2FF]  bg-blend-lighten md:bg-blend-darken backdrop-blur-sm white-glassmorphism ">
             Login
-          </li>
+          </li> */}
         </ul>
 
         {/* //checking if the toggleMenu is turned on or not */}

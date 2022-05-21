@@ -22,3 +22,15 @@ const App = () => (
 );
 
 export default App;
+
+
+
+//Version controller
+
+
+// git init
+// git remote add origin https://github.com/Tshembani04/Health-app.git
+// git add .
+// git commit -m "Updates"
+// npm run deploy
+// git push -u origin master 0.062034
