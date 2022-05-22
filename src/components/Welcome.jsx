@@ -20,7 +20,7 @@ const Input = ({placeholder, name, type, value, handleChange})=>(
     step='0.0001'
     value={value}
     onChange={(e) => handleChange(e, name)}
-    className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism "
+    className="w-full p-2 my-2 text-sm text-white bg-transparent border-none rounded-sm outline-none white-glassmorphism "
      />
 );
 
@@ -47,15 +47,15 @@ const Welcome = () => {
 
 
   return(
-      <div  className="flex w-full justify-center items-center">
-          <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
-              <div className="flex flex-1 justify-start flex-col mf:mr-10">
-                  <h1 className="text-3xl sm:text-5xl  py-1 text-white">
+      <div  className="flex items-center justify-center w-full">
+          <div className="flex flex-col items-start justify-between px-4 py-12 mf:flex-row md:p-20">
+              <div className="flex flex-col justify-start flex-1 mf:mr-10">
+                  <h1 className="py-1 text-3xl text-white sm:text-5xl">
                       Send Crypto <br /> Across 加密桥.
                   </h1>
-                  <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
+                  <p className="w-11/12 mt-5 text-base font-light text-left text-white md:w-9/12">
                       Explore The Crypto World.  Send Ethereum to your friends, family and fellow co-workers on 加密桥 with lightspeed and low-fees. 
-                      Made with ♥‿♥ by Tshembani Mhlongo
+                      Made with ♥‿♥ by Tshembani Mhlongo aka 0xREdPill
                   </p>
                   // If my account is connected to metamask wallet then I can't see the button 
                   // opposite when not connencted
@@ -65,10 +65,10 @@ const Welcome = () => {
                   onClick={connectWallet}
                   className="flex flex-row justify-center items-center my-4 bg-[#4CC9F0] p-3 rounded-full cursor-pointer hover:bg-gray-200 "
                   >
-                     <p  className=" text-black text-base "> Connect Wallet</p>
+                     <p  className="text-base text-black "> Connect Wallet</p>
                     </button>
                  )} 
-                  <div className="grid sm:grid-cols-3 grid-cols-3 w-full mt-5 border-0 ">
+                  <div className="grid w-full grid-cols-3 mt-5 border-0 sm:grid-cols-3 ">
                       <div className={`rounded-tl-2xl ${commonStyles}` }>
                           Reliability
                       </div>
@@ -90,27 +90,27 @@ const Welcome = () => {
                   </div>
               </div>
 
-              <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
-                  <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism">
-                      <div className="flex justify-between flex-col w-full h-full">
-                          <div className="flex justify-between items-start">
-                              <div className="w-10 h-10 rounded-full border-2 border-white  flex justify-center items-center">
+              <div className="flex flex-col items-center justify-start flex-1 w-full mt-10 mf:mt-0">
+                  <div className="flex-col items-start justify-end w-full h-40 p-3 my-5 rounded-xl sm:w-72 eth-card white-glassmorphism">
+                      <div className="flex flex-col justify-between w-full h-full">
+                          <div className="flex items-start justify-between">
+                              <div className="flex items-center justify-center w-10 h-10 border-2 border-white rounded-full">
                                   <SiEthereum fontSize={21} color="#fff"/>
                               </div>
                               <BsInfoCircle fontSize={17} color="#fff"/>
                           </div>
                           <div>
-                              <p className="text-white font-light text-sm">
+                              <p className="text-sm font-light text-white">
                                   { shortenAddress(currentAccount) }
                               </p>
-                              <p className="text-white font-semibold text-lg mt-1">
+                              <p className="mt-1 text-lg font-semibold text-white">
                             Ethereum
                               </p>
                           </div>
                       </div>
                   </div>
 
-                <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
+                <div className="flex flex-col items-center justify-start w-full p-5 sm:w-96 blue-glassmorphism">
                 <Input placeholder='Address To' name='addressTo' type='text' handleChange={handleChange} />
                 <Input placeholder='Amount (ETH)' name='amount' type='number' handleChange={handleChange} />
                 <Input placeholder='Keyword (Gif)' name='keyword' type='text' handleChange={handleChange} />
