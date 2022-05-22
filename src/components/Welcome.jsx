@@ -55,7 +55,7 @@ const Welcome = () => {
                   </h1>
                   <p className="w-11/12 mt-5 text-base font-light text-left text-white md:w-9/12">
                       Explore The Crypto World.  Send Ethereum to your friends, family and fellow co-workers on 加密桥 with lightspeed and low-fees. 
-                      Made with ♥‿♥ by Tshembani Mhlongo aka 0xREdPill
+                      Made with ♥‿♥ by Tshembani Mhlongo aka 0xRedPill
                   </p>
                   // If my account is connected to metamask wallet then I can't see the button 
                   // opposite when not connencted
