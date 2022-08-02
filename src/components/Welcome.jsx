@@ -4,7 +4,7 @@ import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 
 import { TransactionContext, TransactionProvider } from "../context/TransactionContext";
-import { Loader } from "./";
+import { Loader } from ".";
 import { shortenAddress } from "../utils/shortenAddress";
 
 
@@ -27,7 +27,7 @@ const Input = ({placeholder, name, type, value, handleChange})=>(
 
 const Welcome = () => {
 
-    const {connectWallet, currentAccount, formData, sendTransaction, handleChange } = useContext(TransactionContext);
+    const {connectWallet, currentAccount, formData, sendTransaction, handleChange, isLoading } = useContext(TransactionContext);
 
   
 
@@ -51,11 +51,11 @@ const Welcome = () => {
           <div className="flex flex-col items-start justify-between px-4 py-12 mf:flex-row md:p-20">
               <div className="flex flex-col justify-start flex-1 mf:mr-10">
                   <h1 className="py-1 text-3xl text-white sm:text-5xl">
-                      Send Crypto <br /> Across 加密桥.
+                      Send Crypto <br /> Across 加密桥 .
                   </h1>
                   <p className="w-11/12 mt-5 text-base font-light text-left text-white md:w-9/12">
-                      Explore The Crypto World.  Send Ethereum to your friends, family and fellow co-workers on 加密桥 with lightspeed and low-fees. 
-                      Made with ♥‿♥ by Tshembani Mhlongo aka 0xREdPill
+                      Explore The Crypto World.  Send Ethereum to your friends, family and fellow co-workers on 加密桥 (Crytpo Bridge) with lightspeed and low-fees. 
+
                   </p>
                   // If my account is connected to metamask wallet then I can't see the button 
                   // opposite when not connencted
@@ -118,7 +118,7 @@ const Welcome = () => {
 
                 <div className="h-[1px] w-full bg-white"/>
 
-                {false ? (
+                {isLoading ? (
                     <Loader/>
                 ): (
                <button 
@@ -140,5 +140,16 @@ const Welcome = () => {
 };
 
 export default Welcome;
+
+
+{/* <h1 className="py-1 text-3xl text-white sm:text-5xl">
+Send Crypto <br /> Across 加密桥.
+</h1>
+<p className="w-11/12 mt-5 text-base font-light text-left text-white md:w-9/12">
+Explore The Crypto World.  Send Ethereum to your friends, family and fellow co-workers on 加密桥 with lightspeed and low-fees. 
+
+</p>
+// If my account is connected to metamask wallet then I can't see the button 
+// opposite when not connencted */}
 
 
